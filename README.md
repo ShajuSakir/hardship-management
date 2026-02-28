@@ -45,22 +45,6 @@ The project demonstrates:
 
 ---
 
-# Project Structure
-
-hardship-app/
-│
-├── backend/
-│ └── Hardship.Api
-│
-├── frontend/
-│ └── src/
-│
-├── README.md
-└── .gitignore
-
-
----
-
 # Prerequisites
 
 Ensure the following tools are installed:
