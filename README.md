@@ -62,10 +62,10 @@ Ensure the following tools are installed:
         cd backend
 ## 2 Restore dependencies
         dotnet restore
-## 3    Restore dependencies
+## 3 Apply migrations / create database
         dotnet ef database update 
         (This will automatically create the SQLite database file.)
-## 4    Run the API
+## 4 Run the API
         dotnet run 
         (Once running, Swagger will be available at: https://localhost:<port>/swagger)
 
@@ -114,11 +114,11 @@ Ensure the following tools are installed:
 
 ## Future Enhancements
 
-    - **Authentication & Authorization**  
+    **Authentication & Authorization**  
     Implement JWT-based authentication with role-based access control.
-    - **Production-Ready Database**  
+    **Production-Ready Database**  
     Replace SQLite with PostgreSQL or SQL Server for scalable deployment.
-    - **Automated Testing**  
+    **Automated Testing**  
     Add backend unit/integration tests and frontend component testing.
-    - **Containerization & CI/CD**  
+    **Containerization & CI/CD**  
     Dockerize the application and implement a CI/CD pipeline for deployment.
