@@ -1,0 +1,75 @@
+# ==========================================
+# General
+# ==========================================
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+*.env
+!.env.example
+
+# Logs
+*.log
+
+# ==========================================
+# Backend (.NET)
+# ==========================================
+
+# Build folders
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Visual Studio
+.vs/
+
+# Rider / JetBrains
+.idea/
+
+# EF Core temporary files
+*.runtimeconfig.dev.json
+
+# SQLite database files
+*.db
+*.db-wal
+*.db-shm
+
+# ==========================================
+# Frontend (React / Vite)
+# ==========================================
+
+# Dependencies
+**/node_modules/
+
+# Production build output
+frontend/dist/
+
+# Vite cache
+frontend/.vite/
+
+# Coverage
+coverage/
+
+# ==========================================
+# Misc
+# ==========================================
+
+# Mac/Linux temp
+*.swp
+*~
+
+# Normalize line endings
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.cs text eol=lf

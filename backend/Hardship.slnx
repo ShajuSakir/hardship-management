@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Hardship.API/Hardship.API.csproj" />
+  <Project Path="Hardship.Application/Hardship.Application.csproj" />
+  <Project Path="Hardship.Domain/Hardship.Domain.csproj" />
+  <Project Path="Hardship.Infrastructure/Hardship.Infrastructure.csproj" />
+  <Project Path="Hardship.Tests/Hardship.Tests.csproj" Id="2b11d0af-e5ab-4a29-99bc-e813c4e31209" />
+</Solution>
