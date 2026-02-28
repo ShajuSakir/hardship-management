@@ -89,7 +89,7 @@ Ensure the following tools are installed:
 
 ---
 
-# rchitecture Notes
+# Architecture Notes
 
 ## Backend
 
