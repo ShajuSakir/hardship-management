@@ -17,9 +17,9 @@ namespace Hardship.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CreateHardshipCommand command)
+        public async Task<IActionResult> Create(CreateHardshipCommand command, CancellationToken ct)
         {
-            var id = await _mediator.Send(command);
+            var id = await _mediator.Send(command, ct);
             return CreatedAtAction(nameof(GetAll), new { id }, id);
         }
 
@@ -31,11 +31,11 @@ namespace Hardship.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, UpdateHardshipCommand command)
+        public async Task<IActionResult> Update(Guid id, UpdateHardshipCommand command, CancellationToken ct)
         {
             command = command with { Id = id };
 
-            await _mediator.Send(command);
+            await _mediator.Send(command, ct);
             return NoContent();
         }
         [HttpGet("{id}")]
@@ -52,6 +52,18 @@ namespace Hardship.API.Controllers
                 });
 
             return Ok(result);
-        }        
+        }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> Delete(Guid id, CancellationToken ct)
+        {
+            var deleted = await _mediator.Send(new DeleteHardshipCommand(id), ct);
+            if (!deleted)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
+        }
     }
 }
